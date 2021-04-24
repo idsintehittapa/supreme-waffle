@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="main__weather-wrapper">
+      <div class="background-color">
+        <div id="weatherToday" class="main__container"></div>
+      </div>
+    </section>
+
+    <section class="search">
+      <p>Check another place?</p>
+      <label for="pickedPlace" class="city-serch"></label>
+      <input
+        type="input"
+        id="pickedPlace"
+        name="pickedPlace"
+        placeholder="City, Country code"
+      />
+
+      <input
+        type="button"
+        id="btnSearch"
+        value="Search"
+        onclick="selectedPlace()"
+      />
+    </section>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
