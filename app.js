@@ -1,12 +1,14 @@
-import secrets from './secrets.js'
-
 const containerToday = document.getElementById("weatherToday");
 let citySearched = "Barcelona";
+
+// this should come from a secrets store
+const api_key = 'xxx';
+
 
 //Fetch weather today API
 const fetchWeatherToday = (citySearched) => {
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${citySearched}&units=metric&APPID=${secrets.api_key}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${citySearched}&units=metric&APPID=${api_key}`
   )
     .then((response) => {
       return response.json();
